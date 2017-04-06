@@ -516,8 +516,10 @@ var addListeners = function() {
             CHALLENGE_WAIT = 0;
             challengeStart('yes');
             challengeHolder = determineChallenge();
-            printText('Would you like to continue the challenge?');
             challengeHolder.challenge();
+            if(challengeHolder.hp > 0 && adventurer.hp > 0) {
+              printText('Would you like to continue the challenge?');
+            }
             break;
           case 78: //'n'
             CHALLENGE_WAIT = 0;
@@ -531,8 +533,8 @@ var addListeners = function() {
       else if(CHALLENGE_CONT) {
         switch(event.keyCode) {
           case 89: //'y'
-            printText('Would you like to continue the challenge?');
             challengeHolder.challenge();
+            printText('Would you like to continue the challenge?');
             break;
           case 78: //'n'
             CHALLENGE_CONT = 0;
