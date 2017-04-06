@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+
+<!-- THIS SCRIPT WAS DEVELOPED IN MOZILLA FIREFOX -->
+
+<!--
+  command guide:
+  up, down, left, right - to move on the map
+  'h' - check current hp (removed)
+  'p' - check current prize count (removed)
+  'esc' - short-circuit the program
+  'm' - view adventurer map (where you have been, the rest is fog) (removed)
+  'l' - view master map (to aid in faster completion for testing and grading)
+
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>lab3</title>
+
+    <!--inline css to make printing the map friendlier to view.-->
+    <!--switch to bootstrap in the future-->
+    <style>
+      p {
+        font-family: monospace;
+        font-size: 12px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 12px;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="main.js"></script>
+    <!-- <script src="tester.js"></script> -->
+
+    <script>
+      $(document).ready(function() {
+        runGame();
+        // test();
+      });
+    </script>
+  </head>
+
+</html>
